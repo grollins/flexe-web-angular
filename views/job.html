@@ -1,0 +1,39 @@
+<div class="container" id="job-details">
+    <div class="row">
+        <div class="col-lg-12">
+            <a href="#/home"><span class="glyphicon glyphicon-arrow-left"></span>Back to Home</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" id="job-details-header">
+            <ul>
+                <li>{{jobData.title}}</li>
+                <li>{{jobData.status}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row" ng-show="jobDone">
+        <div class="col-lg-12" id="job-details-results">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Structure</th>
+                        <th>Energy (kcal/mol)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="s in structureList">
+                        <td>{{s.name}}</td>
+                        <td>{{s.energy}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" id="job-details-buttons">
+            <button class="btn btn-primary" type="button" ng-click="refreshJob()">Refresh</button>
+            <button class="btn btn-danger pull-right" type="button" ng-click="deleteJob()">Delete</button>
+        </div>
+    </div>
+</div>
