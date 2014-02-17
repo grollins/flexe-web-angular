@@ -1,12 +1,18 @@
 'use strict';
 
 angular.module('flexeWebApp')
-  .directive('file', function () {
-    return {
-      template: '<div></div>',
-      restrict: 'E',
-      link: function postLink(scope, element, attrs) {
-        element.text('this is the file directive');
-      }
-    };
-  });
+    .directive('file', function () {
+        return {
+            scope: {
+                file: '='
+            },
+            link: function(scope, el, attrs) {
+                el.bind('change', function(event) {
+                    var files = event.target.files;
+                    var file = files[0];
+                    scope.file = file ? file : undefined;
+                    scope.$apply();
+                });
+            }
+        };
+    });

@@ -17,14 +17,16 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Structure</th>
-                        <th>Energy (kcal/mol)</th>
+                        <th>RMSD (Å)</th>
+                        <th>Energy Ref to PDB (kcal/mol)</th>
+                        <th>Energy PDB to Ref (kcal/mol)</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="s in structureList">
-                        <td>{{s.name}}</td>
-                        <td>{{s.energy}}</td>
+                    <tr>
+                        <td>{{result.rmsd | number:2}}
+                        <td>{{result.energy_ref_to_pdb | number:2}}</td>
+                        <td>{{result.energy_pdb_to_ref | number:2}}</td>
                     </tr>
                 </tbody>
             </table>

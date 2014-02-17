@@ -36,6 +36,7 @@ angular.module('flexeWebApp')
             .error(function(data, status, headers, config) {
                 $scope.status = status;
                 $log.debug('Job post failed');
+                $log.debug(data);
                 $scope.refreshJobs();
                 $scope.submissionFailed = true;
                 $scope.submissionStatus = status;

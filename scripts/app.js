@@ -3,7 +3,7 @@
 angular.module('flexeWebApp', ['ngRoute'])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/job', {
+      .when('/jobs/:jobId', {
         templateUrl: 'views/job.html',
         controller: 'JobCtrl'
       })
