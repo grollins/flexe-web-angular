@@ -31,16 +31,14 @@
 
     <div class="container">
         <div class="header" ng-controller="HeaderCtrl">
-            <ul class="nav nav-pills pull-right" ng-show="isLoggedIn()" ng-cloak>
-                <li ng-class="{ active: isActive('/home')}"><a href="#/home"><span class="glyphicon glyphicon-home"></span>Home</a></li>
-                <li ng-class="{ active: isActive('/about')}"><a href="#/about"><span class="glyphicon glyphicon-book"></span>About</a></li>
-                <li ng-class="{ active: isActive('/contact')}"><a href="#/contact"><span class="glyphicon glyphicon-envelope"></span>Contact</a></li>
-                <li ng-click="logout()"><a class="logout" href="#/login"><span class="glyphicon glyphicon-warning-sign"></span>Logout</a></li>
+            <h1 class="text-muted">FlexE-web</h1>
+            <img src="images/protG_small.png"></img>
+            <ul id="header-navbar" class="nav nav-pills" ng-show="isLoggedIn()" ng-cloak>
+                    <li ng-class="{ active: isActive('/home')}"><a href="#/home"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                    <li ng-class="{ active: isActive('/about')}"><a href="#/about"><span class="glyphicon glyphicon-book"></span>About</a></li>
+                    <li ng-class="{ active: isActive('/contact')}"><a href="#/contact"><span class="glyphicon glyphicon-envelope"></span>Contact</a></li>
+                    <li ng-click="logout()"><a class="logout" href="#/login"><span class="glyphicon glyphicon-warning-sign"></span>Logout</a></li>
             </ul>
-            <div id="header-logo">
-              <h1 class="text-muted">FlexE-web</h1>
-              <img src="images/protG_small.png"></img>
-            </div>
         </div>
 
         <div class="main">
