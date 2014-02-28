@@ -43,6 +43,11 @@ angular.module('flexeWebApp')
             });
             $scope.jobForm.$setPristine();
             $scope.job.title = '';
+            angular.forEach(
+            angular.element("input[type='file']"),
+            function(inputElem) {
+                angular.element(inputElem).val(null);
+            });
         };
 
         $scope.refreshJobs = function() {
