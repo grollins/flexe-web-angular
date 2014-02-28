@@ -48,6 +48,6 @@ angular.module('flexeWebApp', ['ngRoute'])
     })
   })
   .run( function(FlexeWebBackend) {
-      // SeawebBackend.setLocation('http://198.199.97.60');
-      FlexeWebBackend.setLocation('http://127.0.0.1:8001');
+      FlexeWebBackend.setLocation('http://107.170.237.217');
+      // FlexeWebBackend.setLocation('http://127.0.0.1:8001');
   });
