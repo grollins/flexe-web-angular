@@ -17,16 +17,18 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
+                        <th>Filename</th>
                         <th>RMSD (Å)</th>
                         <th>∆E Ref &#10175; PDB (kcal/mol/residue)</th>
                         <th>∆E PDB &#10175; Ref (kcal/mol/residue)</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>{{result.rmsd | number:2}}
-                        <td>{{result.energy_ref_to_pdb | number:2}}</td>
-                        <td>{{result.energy_pdb_to_ref | number:2}}</td>
+                    <tr ng-repeat="r in results">
+                        <td>{{r.name}}</td>
+                        <td>{{r.rmsd | number:2}}
+                        <td>{{r.energy_ref_to_pdb | number:2}}</td>
+                        <td>{{r.energy_pdb_to_ref | number:2}}</td>
                     </tr>
                 </tbody>
             </table>

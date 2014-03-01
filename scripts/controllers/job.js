@@ -10,7 +10,7 @@ angular.module('flexeWebApp')
             .success(function(data, status) {
                 $scope.status = status;
                 $scope.jobData = data;
-                $scope.result = data.result[0];
+                $scope.results = data.result;
                 $log.debug('Job refresh success');
                 if (data.status === 'done') {
                     $scope.jobDone = true;
