@@ -19,12 +19,12 @@
                     <tr>
                         <th>Filename</th>
                         <th>RMSD (Å)</th>
-                        <th>∆E Ref &#10175; PDB (kcal/mol/residue)</th>
-                        <th>∆E PDB &#10175; Ref (kcal/mol/residue)</th>
+                        <th>∆E Ref to PDB (kcal/mol/residue)</th>
+                        <th>∆E PDB to Ref (kcal/mol/residue)</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="r in results">
+                    <tr ng-repeat="r in results | orderBy:'name'">
                         <td>{{r.name}}</td>
                         <td>{{r.rmsd | number:2}}
                         <td>{{r.energy_ref_to_pdb | number:2}}</td>
